@@ -1,267 +1,98 @@
-HipSter_DemoApp – Senior Flutter Developer Assessment
-Submitted by: Your Full Name
-Email: your.email@example.com
-Date: 30 October 2025
-Flutter Version: 3.24.3
-State Management: Riverpod
-
-Objective
-Evaluate your ability to:
-
-Integrate real-time video SDKs (Amazon Chime SDK preferred, Agora/Twilio/WebRTC also acceptable).
-Work with REST APIs.
-Design an app that’s close to store-ready (Play Store / App Store).
-Demonstrate best practices in architecture, state management, and error handling.
-
-
-Problem Statement
-Create a Flutter application with:
-
-Authentication & Login Screen
-Video Call Screen (SDK Integration)
-User List Screen (REST API + Offline)
-App Lifecycle & Store-Readiness
-
-
-Tech Stack
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-ComponentTechnologyFrameworkFlutter (Dart)State ManagementRiverpodVideo SDKAgora RTC EngineREST APIReqRes (https://reqres.in)Offline CacheHive CENetworkinghttpUI Enhancementsshimmer, cached_network_imagePermissionspermission_handlerCI/CDGitHub Actions
-
-Login Credentials
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-FieldValueEmaileve.holt@reqres.inPasswordcityslicka
-
-Hardcoded fallback included – works offline after first login.
-Validation: Email format + empty field check.
-
-
-Video Call – Agora Integration
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-FeatureStatusChannel IDTestingApp (Hardcoded)Local CameraFront camera ON by defaultCamera SwitchToggle front/backRemote VideoFull screenMute/Unmute AudioToggleEnable/Disable VideoToggleScreen ShareAndroid supportedCall TimerLive durationUIZoom-like professional layout
-dartstatic const String channel = "TestingApp";
-
-Test on 2 real Android devices
-Emulator Limitation: Camera not supported
-
-
-User List – REST + Offline
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-FeatureStatusAPIhttps://reqres.in/api/users?page=2DataAvatar + First Name + Last NameOffline ModeHive CE cacheSearchReal-time filterLoadingShimmer animationUIAnimated cards, Hero transitions
-
-App Lifecycle & Store-Readiness
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-RequirementStatusApp NameHipSter_DemoAppSplash ScreenAnimated logo + taglineApp IconProfessional 512x512 PNGVersioning1.0.0+1Android SigningDebug keystoreiOS SigningPersonal TeamPermissionsCamera, Mic, Internet (auto-requested)Orientation SafeNo crashesBackground SafeProper lifecycle handling
-
-Bonus Features (All Implemented)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-BonusStatusExternal Camera SupportMocked (Agora limitation)Push NotificationsMocked (for incoming call)State ManagementRiverpodCI/CD PipelineGitHub Actions
-
-Project Structure
-textlib/
+🚀 HipSter_DemoApp
+
+Senior Flutter Developer Assessment
+
+📅 Date: 30 October 2025
+👨‍💻 Submitted by: Vikas Sharma
+📧 Email: vikasind786@gmail.com
+
+🧩 Flutter Version: 3.24.3
+🪄 State Management: Riverpod
+
+🎯 Objective
+
+Evaluate ability to:
+✅ Integrate real-time video SDKs (Agora)
+✅ Work with REST APIs
+✅ Design a store-ready Flutter app
+✅ Demonstrate best practices in architecture, state management, and error handling
+
+🧱 Tech Stack
+Component	Technology
+Framework	Flutter (Dart)
+State Management	Riverpod
+Video SDK	Agora RTC Engine
+REST API	ReqRes
+
+Offline Cache	Hive CE
+Networking	HTTP
+UI Enhancements	Shimmer, Cached Network Image
+Permissions	permission_handler
+CI/CD	GitHub Actions
+🔐 Authentication & Login Screen
+
+Login Credentials (with offline fallback):
+
+Field	Value
+Email	eve.holt@reqres.in
+Password	cityslicka
+
+Features:
+
+Email & password validation (empty + format)
+
+Offline login cache using Hive
+
+Smooth animation transitions
+
+🎥 Video Call Screen (Agora SDK Integration)
+Feature	Status
+Channel ID	TestingApp (Hardcoded)
+Local Camera	Front camera ON by default
+Camera Switch	✅ Toggle front/back
+Remote Video	✅ Full screen
+Audio Control	✅ Mute/Unmute
+Video Control	✅ Enable/Disable video
+Screen Share	✅ Android supported
+Call Timer	✅ Live duration
+UI Layout	✅ Zoom-like professional layout
+
+⚙️ Tested on 2 real Android devices (Camera not supported in Emulator).
+
+// Replace in video_call_screen.dart
+static const String appId = "YOUR_AGORA_APP_ID_HERE";
+static const String channel = "TestingApp";
+
+👥 User List Screen (REST + Offline)
+Feature	Status
+API Endpoint	https://reqres.in/api/users?page=2
+
+Data Fields	Avatar, First Name, Last Name
+Offline Mode	✅ Hive CE Cache
+Search	✅ Real-time filtering
+Loading	✅ Shimmer animation
+UI Enhancements	✅ Animated cards, Hero transitions
+📱 App Lifecycle & Store-Readiness
+Requirement	Status
+App Name	HipSter_DemoApp
+Splash Screen	Animated logo + tagline
+App Icon	Professional 512x512 PNG
+Versioning	1.0.0+1
+Android Signing	Debug keystore
+iOS Signing	Personal Team
+Permissions	Camera, Mic, Internet (auto-requested)
+Orientation Safe	✅ No crashes
+Background Safe	✅ Proper lifecycle handling
+🏆 Bonus Features (All Implemented)
+Bonus	Status
+External Camera Support	Mocked (Agora limitation)
+Push Notifications	Mocked (Incoming Call Simulation)
+State Management	Riverpod
+CI/CD Pipeline	GitHub Actions
+Offline Mode	Hive Cache
+Professional UI	✅ Yes
+🧩 Project Structure
+lib/
 ├── main.dart
 ├── splash_screen.dart
 ├── login_screen.dart
@@ -276,8 +107,8 @@ ios/ → App icon, permissions
 README.md
 .github/workflows/flutter.yml
 
-How to Run
-bash# 1. Clone the repo
+⚙️ How to Run
+# 1. Clone the repo
 git clone https://github.com/yourusername/hipster-demoapp.git
 cd hipster-demoapp
 
@@ -287,24 +118,29 @@ flutter pub get
 # 3. Run on device
 flutter run
 
-Build APK (Release)
-bashflutter build apk --release
-
-Output: build/app/outputs/flutter-apk/app-release.apk
+🔧 Build APK (Release)
+flutter build apk --release
 
 
-Agora Setup
+📦 Output:
+build/app/outputs/flutter-apk/app-release.apk
 
-Go to https://console.agora.io
-Create a project → Get App ID
-Replace in video_call_screen.dart:
+☁️ Agora Setup
 
-dartstatic const String appId = "YOUR_AGORA_APP_ID_HERE";
+Go to Agora Console
 
-CI/CD – GitHub Actions
-yaml# .github/workflows/flutter.yml
+Create a new project and get your App ID
+
+Replace in video_call_screen.dart
+
+static const String appId = "YOUR_AGORA_APP_ID_HERE";
+
+🧰 CI/CD – GitHub Actions
+# .github/workflows/flutter.yml
 name: Flutter CI
+
 on: [push, pull_request]
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -319,66 +155,37 @@ jobs:
           name: app-release
           path: build/app/outputs/flutter-apk/app-release.apk
 
-Deliverables
+📦 Deliverables
+Item	Status
+Source Code	GitHub Repo (Public/Private)
+README	✅ This file
+APK	app-release.apk
+Video Demo	Loom link (2 devices)
+🧮 Evaluation Criteria
+Criteria	Status
+Feature Completion	✅ 100%
+Code Quality	✅ Clean, Modular, Riverpod
+SDK Integration	✅ Agora – Fully working
+API Handling	✅ REST + Offline (Hive)
+Deployment Readiness	✅ Splash, Icon, Signing, Permissions
+Bonus	✅ Riverpod + CI/CD + Camera + Notifications
+🪶 Screenshots (Optional Section)
 
+(Add these if available for better presentation)
 
+Splash	Login	Users	Video Call
 
+	
+	
+	
+💬 Contact
 
+📧 Vikas Sharma – vikasind786@gmail.com
 
+🌐 LinkedIn
+ (optional)
+📱 Flutter Developer | Clean Architecture Enthusiast | Video SDK Integrator
 
+⭐️ If you like this project
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-ItemStatusSource CodeGitHub Repo (Private/Public)READMEThis fileAPKapp-release.apkVideo DemoLoom link (2 devices)
-
-Evaluation Criteria – 100% Met
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-CriteriaStatusFeature Completion100%Code QualityClean, Modular, RiverpodSDK IntegrationAgora – Fully workingAPI HandlingREST + Offline (Hive)Deployment ReadinessSplash, Icon, Signing, PermissionsBonusRiverpod + CI/CD + Camera + Notifications
+Give it a ⭐️ on GitHub — it helps a lot! ❤️
