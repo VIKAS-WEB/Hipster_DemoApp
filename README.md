@@ -34,8 +34,8 @@ CI/CD	GitHub Actions
 Login Credentials (with offline fallback):
 
 Field	Value
-Email	eve.holt@reqres.in
-Password	cityslicka
+Email- eve.holt@reqres.in
+Password- cityslicka
 
 Features:
 
