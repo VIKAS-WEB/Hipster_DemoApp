@@ -109,7 +109,7 @@ README.md
 
 ⚙️ How to Run
 # 1. Clone the repo
-git clone https://github.com/yourusername/hipster-demoapp.git
+git clone https://github.com/VIKAS-WEB/Hipster_DemoApp.git
 cd hipster-demoapp
 
 # 2. Get dependencies
